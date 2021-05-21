@@ -1,22 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using BestRestaurant.Models;
+using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BestRestaurant.Controllers
+namespace HairSalon.Controllers
 {
-  public class RestaurantsController : Controller
+  public class StylistController : Controller
   {
-    private readonly BestRestaurantContext _db;
+    private readonly HairSalonContext _db;
 
-    public RestaurantsController(BestRestaurantContext db)
+    public void StylistsController(HairSalonContext db)
     {
       _db = db;
     }
     public ActionResult Index()
     {
-      List<Restaurant> model = _db.Restaurants.ToList();
+      List<Stylist> model = _db.Stylists.ToList();
       return View(model);
     }
 
@@ -26,43 +26,43 @@ namespace BestRestaurant.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Restaurant restaurant)
+    public ActionResult Create(Stylist stylist)
     {
-      _db.Restaurants.Add(restaurant);
+      _db.Stylists.Add(stylist);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
     public ActionResult Details(int id)
     {
-      Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(r => r.RestaurantId == id);
-      return View(thisRestaurant);
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(r => r.StylistId == id);
+      return View(thisStylist);
     }
     public ActionResult Edit(int id)
     {
-      Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(r => r.RestaurantId == id);
-      return View(thisRestaurant);
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(r => r.StylistId == id);
+      return View(thisStylist);
     }
 
     [HttpPost]
-    public ActionResult Edit(Restaurant restaurant)
+    public ActionResult Edit(Stylist stylist)
     {
-      _db.Entry(restaurant).State = EntityState.Modified;
+      _db.Entry(stylist).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
     public ActionResult Delete(int id)
     {
-      Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(r => r.RestaurantId == id);
-      return View(thisRestaurant);
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(r => r.StylistId == id);
+      return View(thisStylist);
     }
 
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
-      _db.Restaurants.Remove(thisRestaurant);
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      _db.Stylists.Remove(thisStylist);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

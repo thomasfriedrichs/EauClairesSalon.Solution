@@ -12,6 +12,7 @@ namespace HairSalon
     {
       var builder = new ConfigurationBuilder()
           .SetBasePath(env.ContentRootPath)
+          .AddJsonFile("appsettings.json")
           .AddEnvironmentVariables();
       Configuration = builder.Build();
     }
