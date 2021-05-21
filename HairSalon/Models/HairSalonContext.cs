@@ -13,5 +13,5 @@ namespace HairSalon.Models
     {
       optionsBuilder.UseLazyLoadingProxies();
     }
-  }
+  }  
 }
