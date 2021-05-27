@@ -20,13 +20,13 @@ namespace HairSalon.Controllers
       return View(model);
     }
 
-    public ActionResult New()
+    public ActionResult Create()
     {
       return View();
     }
 
     [HttpPost]
-    public ActionResult New(Stylist stylist)
+    public ActionResult Create(Stylist stylist)
     {
       _db.Stylists.Add(stylist);
       _db.SaveChanges();
