@@ -42,7 +42,7 @@ _{This program uses one to many relationships to create and track stylists along
 
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) [2021] [Thomas Friedrichs]
 
 _{If you have any questions or concerns please feel free to contact me!}_
 
