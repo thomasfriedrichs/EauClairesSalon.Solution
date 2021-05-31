@@ -40,7 +40,7 @@ DROP TABLE IF EXISTS `Stylists`;
 CREATE TABLE `Stylists` (
   `StylistId` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL,
-  `Sartdate` varchar(255) DEFAULT NULL,
+  `SartDate` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`StylistId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -54,4 +54,4 @@ CREATE TABLE `Stylists` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-27  0:38:43
+-- Dump completed on 2021-05-31 14:10:55
