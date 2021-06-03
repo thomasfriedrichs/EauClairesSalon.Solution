@@ -40,7 +40,7 @@ DROP TABLE IF EXISTS `Stylists`;
 CREATE TABLE `Stylists` (
   `StylistId` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL,
-  `SartDate` varchar(255) DEFAULT NULL,
+  `StartDate` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`StylistId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
